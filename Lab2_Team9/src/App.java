@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Adam
+ * @author az060_001
  */
 public class App {
 
