@@ -75,4 +75,28 @@ public class Bank {
             System.out.println(commercial.getInfo());
         }
     }
+    public void getInfo()
+    {
+        System.out.println("Bank Name: "+BankName);
+        System.out.println("Savings List:");
+        for(int i=0; i < savingsList.size(); i++){
+            Savings savings = savingsList.get(i);
+            System.out.println(savings.getInfo());
+        }
+        System.out.println("Checkings List:");
+        for(int i=0; i < checkingList.size(); i++){
+            Checking checking = checkingList.get(i);
+            System.out.println(checking.getInfo());
+        }
+        System.out.println("Personal List: ");
+        for(int i=0; i < personalList.size(); i++){
+            Personal personal = personalList.get(i);
+            System.out.println(personal.getInfo());
+        }
+        System.out.println("Commercial List: ");
+        for(int i=0; i<commercialList.size(); i++){
+            Commercial commercial = commercialList.get(i);
+            System.out.println(commercial.getInfo());
+        }        
+    }
 }
