@@ -9,30 +9,30 @@
  * @author Arthur
  */
 public abstract class Customer {
-    private String AccountNum;
+    private String CustomerID;
     private String PIN;
     
-    public Customer(String AccountNum, String PIN)
+    public Customer(String CustomerID, String PIN)
     {
-        this.AccountNum = AccountNum;
+        this.CustomerID = CustomerID;
         this.PIN = PIN;
     }
     public String getInfo()
     {
-        return "Account Number: "+AccountNum+", PIN: "+ PIN;
+        return "Account Number: "+CustomerID+", PIN: "+ PIN;
     }
     /**
      * @return the AccountNum
      */
-    public String getAccountNum() {
-        return AccountNum;
+    public String getCustomerID() {
+        return CustomerID;
     }
 
     /**
      * @param AccountNum the AccountNum to set
      */
-    public void setAccountNum(String AccountNum) {
-        this.AccountNum = AccountNum;
+    public void setCustomerID(String CustomerID) {
+        this.CustomerID = CustomerID;
     }
 
     /**
