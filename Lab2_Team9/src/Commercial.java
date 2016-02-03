@@ -11,9 +11,9 @@
 public class Commercial extends Customer{
     private String CompanyName;
     
-    Commercial(String AccountNum, String PIN, String CompanyName)
+    Commercial(String CustomerID, String PIN, String CompanyName)
     {
-        super(AccountNum,PIN);
+        super(CustomerID,PIN);
         this.CompanyName = CompanyName;
     }
     @Override
