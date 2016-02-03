@@ -47,6 +47,7 @@ public class App {
                 double balance = 100;
                 Checks check = new Checks((rand.nextInt((100 - 0) + 1) + 0),100);
                 Checking checking = new Checking(accountNumber, routingNumber, balance, check);
+                PNC.addCheckingAccoumt(checking);
             }
             if (accountType == "P")
                 
