@@ -17,7 +17,10 @@ public abstract class Customer {
         this.AccountNum = AccountNum;
         this.PIN = PIN;
     }
-
+    public String getInfo()
+    {
+        return "Account Number: "+AccountNum+", PIN: "+ PIN;
+    }
     /**
      * @return the AccountNum
      */
