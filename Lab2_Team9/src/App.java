@@ -40,14 +40,28 @@ public class App {
             PNC.addPersonal(personal);
             int accountNumber = rand.nextInt((100 - 0) + 1) + 0;
             int routingNumber = rand.nextInt((100 - 0) + 1) + 0;
+            double balance = 100;
             System.out.println("Enter C to create a Checking Account, S to create a Savings Account");
             String accountType = in.next();
             if (accountType == "C")
             {
-                double balance = 100;
+                
                 Checks check = new Checks((rand.nextInt((100 - 0) + 1) + 0),100);
                 Checking checking = new Checking(accountNumber, routingNumber, balance, check);
                 PNC.addCheckingAccoumt(checking);
+            }else if(accountType == "S"){
+                   System.out.println("Please enter Interest Rate");
+                boolean goodSelection = false;
+                double interestRate = 0;
+                while(goodSelection == false){
+                    if(in.hasNextDouble()){
+                         interestRate = in.nextDouble();
+                     goodSelection =true;
+                    }else{
+                    System.out.println("Please enter valid interest rate.");
+                    }
+                    Savings savings = new Savings(accountNumber, routingNumber, balance, interestRate);
+                    PNC.addSavingsAccount(savings);
             }
             if (accountType == "P")
                 
