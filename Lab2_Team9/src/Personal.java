@@ -12,10 +12,17 @@ public class Personal extends Customer{
     private String fName;
     private String lName;
     
-    Personal(){
-        
+    Personal(String fName, String lName)
+    {
+        super(AccountNum, PIN);
+        this.fName = fName;
+        this.lName = lName;
     }
-
+    @Override
+    public String getInfo()
+    {
+        return super.getInfo() + "First Name: "fName + ", Last Name: " + lName;
+    }
     /**
      * @return the fName
      */
