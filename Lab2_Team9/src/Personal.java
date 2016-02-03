@@ -12,7 +12,7 @@ public class Personal extends Customer{
     private String fName;
     private String lName;
     
-    Personal(String fName, String lName)
+    Personal(String AccountNum, String PIN, String fName, String lName)
     {
         super(AccountNum, PIN);
         this.fName = fName;
