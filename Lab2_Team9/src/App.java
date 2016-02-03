@@ -38,12 +38,18 @@ public class App {
             CustomerID = ""+intID;
             Personal personal = new Personal(CustomerID, PIN, fName, lName);
             PNC.addPersonal(personal);
+            int accountNumber = rand.nextInt((100 - 0) + 1) + 0;
+            int routingNumber = rand.nextInt((100 - 0) + 1) + 0;
             System.out.println("Enter C to create a Checking Account, S to create a Savings Account");
             String accountType = in.next();
             if (accountType == "C")
             {
-                
+                double balance = 100;
+                Checks check = new Checks((rand.nextInt((100 - 0) + 1) + 0),100);
+                Checking checking = new Checking(accountNumber, routingNumber, balance, check);
             }
+            if (accountType == "P")
+                
         }
         else if (customerType =="2")
         {
