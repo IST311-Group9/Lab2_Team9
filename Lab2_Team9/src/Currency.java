@@ -15,7 +15,7 @@ public class Currency {
     {
         this.currencyType = currencyType;
     }
-    
+    /*
     public String convertType()
     {
         
