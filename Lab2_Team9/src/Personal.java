@@ -21,7 +21,7 @@ public class Personal extends Customer{
     @Override
     public String getInfo()
     {
-        return super.getInfo() + "First Name: "fName + ", Last Name: " + lName;
+        return super.getInfo() + ", First Name: "+fName + ", Last Name: " + lName;
     }
     /**
      * @return the fName
