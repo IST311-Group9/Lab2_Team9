@@ -17,6 +17,7 @@ public class App {
      */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        Bank PNC = new Bank("PNC");
         String fName;
         String lName;
         String PIN;
@@ -35,6 +36,8 @@ public class App {
             PIN = in.next();
             intID = rand.nextInt((100 - 0) + 1) + 0;
             CustomerID = ""+intID;
+            Personal personal = new Personal(CustomerID, PIN, fName, lName);
+            PNC.addPersonal(personal);
             System.out.println("Enter C to create a Checking Account, S to create a Savings Account");
             String accountType = in.next();
             if (accountType == "C")
